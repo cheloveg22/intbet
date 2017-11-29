@@ -1,13 +1,6 @@
 @import "fonts";
 @import "colors";
 
-
-body {
-  min-height: 100vh;
-  position: relative;
-  padding-bottom: 318px;
-}
-
 .clearfix:after {
   visibility: hidden;
   display: block;
@@ -378,10 +371,6 @@ main {
 }
 
 footer {
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  right: 0;
 
   .sponsors-row {
     background-color: #2d2d2d;

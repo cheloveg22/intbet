@@ -38,11 +38,6 @@
   src: url("../fonts/pfbeausanspro-sebold.ttf") format("truetype");
   font-style: normal;
   font-weight: normal; }
-body {
-  min-height: 100vh;
-  position: relative;
-  padding-bottom: 318px; }
-
 .clearfix:after {
   visibility: hidden;
   display: block;
@@ -352,58 +347,53 @@ main {
                 background: linear-gradient(to bottom, #fc3c1b 0%, #b02911 100%);
                 filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fc3c1b', endColorstr='#b02911', GradientType=0 ); }
 
-footer {
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  right: 0; }
-  footer .sponsors-row {
-    background-color: #2d2d2d; }
-    footer .sponsors-row .wrapper {
-      max-width: 960px;
-      display: flex;
-      justify-content: space-around;
-      flex-wrap: wrap; }
-      footer .sponsors-row .wrapper div {
-        display: inline-block;
-        line-height: 75px; }
-        footer .sponsors-row .wrapper div img {
-          vertical-align: middle; }
-        footer .sponsors-row .wrapper div:first-child {
-          padding-right: 20px; }
-  footer .bottom-row {
-    color: #7d7d7d;
-    background-color: #212121;
-    font-size: 0;
-    border-top: 1px solid #2c2c2c;
+footer .sponsors-row {
+  background-color: #2d2d2d; }
+  footer .sponsors-row .wrapper {
+    max-width: 960px;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap; }
+    footer .sponsors-row .wrapper div {
+      display: inline-block;
+      line-height: 75px; }
+      footer .sponsors-row .wrapper div img {
+        vertical-align: middle; }
+      footer .sponsors-row .wrapper div:first-child {
+        padding-right: 20px; }
+footer .bottom-row {
+  color: #7d7d7d;
+  background-color: #212121;
+  font-size: 0;
+  border-top: 1px solid #2c2c2c;
+  padding-bottom: 40px; }
+  footer .bottom-row .wrapper {
+    display: flex;
+    justify-content: space-around;
     padding-bottom: 40px; }
-    footer .bottom-row .wrapper {
-      display: flex;
-      justify-content: space-around;
-      padding-bottom: 40px; }
-      footer .bottom-row .wrapper div {
+    footer .bottom-row .wrapper div {
+      display: inline-block;
+      width: 25%;
+      text-align: center; }
+      footer .bottom-row .wrapper div h3 {
+        font-family: "ArialRegular", serif;
+        font-size: 16px;
+        padding-bottom: 12px;
+        border-bottom: 1px solid #272727;
+        text-transform: uppercase;
         display: inline-block;
-        width: 25%;
-        text-align: center; }
-        footer .bottom-row .wrapper div h3 {
-          font-family: "ArialRegular", serif;
-          font-size: 16px;
-          padding-bottom: 12px;
-          border-bottom: 1px solid #272727;
-          text-transform: uppercase;
-          display: inline-block;
-          margin-top: 25px;
-          margin-bottom: 10px; }
-        footer .bottom-row .wrapper div span {
-          display: block;
-          font-size: 12px;
-          padding-bottom: 12px; }
-    footer .bottom-row p {
-      font-family: "ArialRegular", serif;
-      font-size: 10px;
-      color: #424242;
-      text-align: center;
-      margin: 0; }
+        margin-top: 25px;
+        margin-bottom: 10px; }
+      footer .bottom-row .wrapper div span {
+        display: block;
+        font-size: 12px;
+        padding-bottom: 12px; }
+  footer .bottom-row p {
+    font-family: "ArialRegular", serif;
+    font-size: 10px;
+    color: #424242;
+    text-align: center;
+    margin: 0; }
 
 @media (max-width: 920px) {
   header nav .logo {
