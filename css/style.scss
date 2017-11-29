@@ -1,0 +1,565 @@
+@import "fonts";
+@import "colors";
+
+
+body {
+  min-height: 100vh;
+  position: relative;
+  padding-bottom: 318px;
+}
+
+.clearfix:after {
+  visibility: hidden;
+  display: block;
+  font-size: 0;
+  content: " ";
+  clear: both;
+  height: 0;
+}
+
+.wrapper {
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+header {
+  background: rgba(72,72,72,1);
+  background: -moz-linear-gradient(top, rgba(72,72,72,1) 24%, rgba(72,72,72,1) 26%, rgba(41,41,41,1) 100%);
+  background: -webkit-gradient(left top, left bottom, color-stop(24%, rgba(72,72,72,1)), color-stop(26%, rgba(72,72,72,1)), color-stop(100%, rgba(41,41,41,1)));
+  background: -webkit-linear-gradient(top, rgba(72,72,72,1) 24%, rgba(72,72,72,1) 26%, rgba(41,41,41,1) 100%);
+  background: -o-linear-gradient(top, rgba(72,72,72,1) 24%, rgba(72,72,72,1) 26%, rgba(41,41,41,1) 100%);
+  background: -ms-linear-gradient(top, rgba(72,72,72,1) 24%, rgba(72,72,72,1) 26%, rgba(41,41,41,1) 100%);
+  background: linear-gradient(to bottom, rgba(72,72,72,1) 24%, rgba(72,72,72,1) 26%, rgba(41,41,41,1) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#484848', endColorstr='#292929', GradientType=0 );
+  border-bottom: 2px solid $green;
+
+  nav {
+    position: relative;
+    font-size: 0;
+
+    .logo {
+      position: absolute;
+      left: 0;
+      top: 13px;
+    }
+
+    ul {
+      font-size: 16px;
+      margin: 0;
+      padding: 0;
+      text-align: center;
+
+      li {
+        display: inline-block;
+        line-height: 72px;
+        padding: 0 8px;
+        box-sizing: border-box;
+        border-right: 1px solid $menu-border;
+
+        a {
+          font-family: "ArialRegular", serif;
+          text-decoration: none;
+          text-transform: uppercase;
+          color: #fff;
+          transition: color .5s;
+          display: block;
+
+          .call-block {
+            @include login-gradient;
+            font-size: 14px;
+            border: 1px solid #d42424;
+            line-height: 16px;
+            padding: 12px 12px 12px 40px;
+            border-radius: 3px;
+            position: relative;
+
+            span {
+              display: block;
+              text-transform: none;
+            }
+
+            img {
+              position: absolute;
+              left: 12px;
+              top: 15px;
+            }
+          }
+        }
+
+        &:last-of-type {
+          border-right: none;
+          vertical-align: middle;
+        }
+
+        &:hover {
+
+          a {
+            color: $green;
+          }
+        }
+      }
+
+      .close-btn {
+        display: none;
+      }
+    }
+
+    .mobile-menu {
+      display: none;
+      cursor: pointer;
+      padding: 5px;
+
+      span {
+        display: block;
+        background-color: white;
+        width: 30px;
+        height: 3px;
+        margin-bottom: 3px;
+
+        &:last-child {
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
+}
+
+main {
+  background-image: url("../img/main-background.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  font-family: "ArialRegular", serif;
+  min-height: 820px;
+
+  .wrapper {
+    position: relative;
+    padding-top: 18px;
+
+    form {
+      background-color: rgba(0, 0, 0, 0.45);
+      display: block;
+      max-width: 300px;
+      padding: 15px 12px 25px 12px;
+      box-sizing: border-box;
+      border-radius: 6px;
+
+      h2 {
+        font-family: "ArialBoldItalic", serif;
+        font-size: 24px;
+        color: white;
+        margin-top: 0;
+        margin-bottom: 15px;
+      }
+
+      h3 {
+        font-family: "ArialItalic", serif;
+        font-size: 18px;
+        color: white;
+        text-align: center;
+        margin-top: 0;
+        margin-bottom: 10px;
+      }
+
+      input {
+        display: block;
+        border: none;
+        border-radius: 3px;
+        width: 100%;
+        box-sizing: border-box;
+        font-size: 14px;
+        line-height: 40px;
+        padding-left: 16px;
+        @include input-shadow;
+
+        &:first-of-type {
+          margin-bottom: 18px;
+        }
+      }
+
+      a {
+        text-decoration: none;
+        color: white;
+        font-size: 11px;
+      }
+
+      .login-btn {
+        @include login-gradient;
+        float: right;
+        margin-top: 20px;
+        border: none;
+        border-radius: 3px;
+        font-family: "ArialBold", serif;
+        font-size: 18px;
+        line-height: 42px;
+        padding: 0 18px;
+        text-transform: uppercase;
+        color: #fff;
+      }
+
+      .register-btn {
+        @include register-gradient;
+        display: block;
+        width: 100%;
+        box-sizing: border-box;
+        border-radius: 3px;
+        border: none;
+        font-family: "ArialBold", serif;
+        font-size: 20px;
+        line-height: 40px;
+        color: #fff;
+      }
+
+      &:first-of-type {
+        margin-bottom: 10px;
+      }
+    }
+
+    .main-text {
+      font-family: "PFBeauSansProSebold", serif;
+      font-size: 36px;
+      max-width: 370px;
+      margin: 0;
+      position: absolute;
+      color: white;
+      top: 18px;
+      left: 315px;
+
+      span {
+        font-family: "PFBeauSansProBold", serif;
+      }
+
+      &:last-of-type {
+        top: 98px;
+      }
+    }
+
+    .cards-row {
+      display: flex;
+      justify-content: space-between;
+      font-size: 0;
+      padding-top: 70px;
+
+      .card-item {
+        display: inline-block;
+        width: 24%;
+        box-sizing: border-box;
+        font-size: 16px;
+        text-align: center;
+        -webkit-box-shadow: 0px 0px 13px 0px rgba(196,255,0,1);
+        -moz-box-shadow: 0px 0px 13px 0px rgba(196,255,0,1);
+        box-shadow: 0px 0px 13px 0px rgba(196,255,0,1);
+
+        .image-block {
+          min-height: 130px;
+          background-image: url("../img/card1.jpg");
+          background-size: cover;
+          background-position: center;
+          
+          &.card-2 {
+            background-image: url("../img/card2.jpg");
+          }
+
+          &.card-3 {
+            background-image: url("../img/card3.jpg");
+          }
+
+          &.card-4 {
+            background-image: url("../img/card4.jpg");
+          }
+        }
+
+        .title-block {
+          font-family: "ArialBold", serif;
+          font-size: 18px;
+          padding: 12px 18px;
+          color: #fff;
+          background-color: $card-1-background;
+          text-align: left;
+          position: relative;
+
+          &.card-2 {
+            background-color: $card-2-background;
+
+            img {
+              top: -5px;
+            }
+          }
+
+          &.card-3 {
+            background-color: $card-3-background;
+
+            img {
+              top: -5px;
+            }
+          }
+
+          &.card-4 {
+            background-color: $card-4-background;
+
+            img {
+              top: -14px;
+            }
+          }
+
+          img {
+            position: absolute;
+            right: 5px;
+            top: -9px;
+          }
+        }
+
+        .text-block {
+          color: $cards-color;
+          font-size: 0;
+          background-color: rgba(255, 255, 255, 0.7);
+          padding: 25px 10px 5px 10px;
+
+          p,
+          button {
+            font-size: 16px;
+            margin: 0;
+          }
+
+          .half-width {
+            display: inline-block;
+            box-sizing: border-box;
+            width: 50%;
+            font-family: "ArialRegular", serif;
+            margin: 0;
+            overflow: hidden;
+
+            span {
+              font-family: "ArialBold", serif;
+            }
+
+            &:first-child {
+              font-family: "ArialBold", serif;
+              font-size: 41px;
+              vertical-align: top;
+            }
+          }
+
+          .full-width {
+            padding-top: 20px;
+            padding-bottom: 5px;
+          }
+
+          .button-block {
+            padding: 0 10px;
+
+            button {
+              @include card-1-gradient;
+              color: #ffffff;
+              line-height: 35px;
+              box-sizing: border-box;
+              width: 100%;
+              border: 0;
+              text-transform: uppercase;
+              border-radius: 3px;
+
+              &.card-2 {
+                @include card-2-gradient;
+              }
+
+              &.card-3 {
+                @include card-3-gradient;
+              }
+
+              &.card-4 {
+                @include card-4-gradient;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+footer {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  right: 0;
+
+  .sponsors-row {
+    background-color: #2d2d2d;
+
+    .wrapper {
+      max-width: 960px;
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
+
+      div {
+        display: inline-block;
+        line-height: 75px;
+
+        img {
+          vertical-align: middle;
+        }
+
+        &:first-child {
+          padding-right: 20px;
+        }
+      }
+    }
+  }
+
+  .bottom-row {
+    color: #7d7d7d;
+    background-color: #212121;
+    font-size: 0;
+    border-top: 1px solid #2c2c2c;
+    padding-bottom: 40px;
+
+    .wrapper {
+      display: flex;
+      justify-content: space-around;
+      padding-bottom: 40px;
+
+      div {
+        display: inline-block;
+        width: 25%;
+        text-align: center;
+
+        h3 {
+          font-family: "ArialRegular", serif;
+          font-size: 16px;
+          padding-bottom: 12px;
+          border-bottom: 1px solid #272727;
+          text-transform: uppercase;
+          display: inline-block;
+          margin-top: 25px;
+          margin-bottom: 10px;
+        }
+
+        span {
+          display: block;
+          font-size: 12px;
+          padding-bottom: 12px;
+        }
+      }
+    }
+
+    p {
+      font-family: "ArialRegular", serif;
+      font-size: 10px;
+      color: #424242;
+      text-align: center;
+      margin: 0;
+    }
+  }
+}
+
+@media (max-width: 920px) {
+
+  header {
+
+    nav {
+      .logo {
+        position: static;
+      }
+
+      ul {
+        @include header-gradient;
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        z-index: 2;
+        transform: translateX(-100%);
+        transition: .3s ease-in;
+
+        li {
+          display: block;
+
+          a {
+
+            .call-block {
+              width: 60px;
+              margin: 0 auto;
+            }
+          }
+        }
+
+        &.menu-opened {
+          display: block;
+          transform: none;
+        }
+
+        .close-btn {
+          display: block;
+          position: absolute;
+          top: 10px;
+          right: 10px;
+          font-family: "ArialBold", serif;
+          font-size: 16px;
+          color: white;
+        }
+      }
+
+      .mobile-menu {
+        display: block;
+      }
+    }
+  }
+
+  main {
+
+    .wrapper {
+
+      .cards-row {
+        flex-wrap: wrap;
+        justify-content: space-between;
+
+        .card-item {
+          width: 49%;
+          margin-bottom: 15px;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 700px) {
+
+  main {
+
+    .wrapper {
+
+      .main-text {
+        position: static;
+        max-width: 100%;
+        padding: 0 20px;
+        text-align: center;
+      }
+    }
+  }
+}
+
+@media (max-width: 460px) {
+
+  main {
+
+    .wrapper {
+
+      .cards-row {
+        justify-content: center;
+
+        .card-item {
+          width: 95%;
+        }
+      }
+    }
+  }
+
+  footer {
+
+    .sponsors-row {
+      padding: 10px;
+    }
+  }
+}
